@@ -1,52 +1,51 @@
 {{ define "main" }}
 
-    <!-- Section Header -->
-    {{range .Params.SectionHeader_1}}
-        {{ partial "components/section-header.html" . }} {{ end }}
+<!-- Section Header -->
+{{ range.Params.SectionHeader_1 }}
+{{ partial "components/section-header.html" . }} {{ end }}
 
-    <!-- Page Menu-->
-    {{ partial "components/page-menu.html" . }}
+<!-- Page Menu-->
+{{ partial "components/page-menu.html" . }}
 
-    <section id="methodology" class="js-section | bg-green-darkest">
-        <!-- Section Header -->
-        {{range .Params.SectionHeader_2}}
-            {{ partial "components/section-header.html" . }} {{ end }}
+<section id="methodology" class="js-section | bg-green-darkest">
+  <!-- Section Header -->
+  {{ range.Params.SectionHeader_2 }}
+  {{ partial "components/section-header.html" . }} {{ end }}
 
-        <!-- Highlight Cards -->
-        <div class="highlight-cards | md:flex-grid container lg:gutter | md:pb-0 pb-4">
-                {{range $.Site.Data.home.Highlights_1}}
-                {{ partial "components/highlight-card.html" . }} {{ end }}
-            </div>
-    </section>
+  <!-- Highlight Cards -->
+  <div
+    class="highlight-cards | md:flex-grid container lg:gutter | md:pb-0 pb-4"
+  >
+    {{range $.Site.Data.home.Highlights_1}}
+    {{ partial "components/highlight-card.html" . }} {{ end }}
+  </div>
+</section>
 
-    <section id="values" class="js-section | space-t--sm space-b">
-        {{range .Params.MediaArticle_1}}
-            {{ partial "components/media-article.html" . }} {{ end }}
-    </section>
-    
-    <!-- Section Header -->
-    <section id="specialists" class="js-section | space-b">
-        {{range .Params.SectionHeader_3}}
-            {{ partial "components/section-header.html" . }} {{ end }}
-    </section>
+<section id="values" class="js-section | space-t--sm space-b">
+  {{ range.Params.MediaArticle_1 }}
+  {{ partial "components/media-article.html" . }} {{ end }}
+</section>
 
-    
-    <section id="missions" class="js-section | bg-oat-light | space-t space-b">
-        <!-- Section Header - Basic -->
-        {{range .Params.SectionHeaderBasic_1}}
-            {{ partial "components/section-header--basic.html" . }} {{ end }}
+<!-- Section Header -->
+<section id="specialists" class="js-section | space-b">
+  {{ range.Params.SectionHeader_3 }}
+  {{ partial "components/section-header.html" . }} {{ end }}
+</section>
 
-        <!-- Flip Cards -->
-        <div class="flip-cards | md:flex-grid justify-between | container gutter-md">
-            {{range .Params.FlipCards_1}}
-                {{ partial "components/flip-card.html" . }} {{ end }}
-        </div>
-    </section>
+<section id="missions" class="js-section | bg-oat-light | space-t space-b">
+  <!-- Section Header - Basic -->
+  {{ range.Params.SectionHeaderBasic_1 }}
+  {{ partial "components/section-header--basic.html" . }} {{ end }}
 
-    <!-- Panel Hero -->
-    {{range .Params.PanelHero_1}}
-        {{ partial "components/panel-hero.html" . }} {{end}}
+  <!-- Flip Cards -->
+  <div class="flip-cards | md:flex-grid justify-between | container gutter-md">
+    {{ range.Params.FlipCards_1 }}
+    {{ partial "components/flip-card.html" . }} {{ end }}
+  </div>
+</section>
 
-
+<!-- Panel Hero -->
+{{ range.Params.PanelHero_1 }}
+{{ partial "components/panel-hero.html" . }} {{ end }}
 
 {{ end }}

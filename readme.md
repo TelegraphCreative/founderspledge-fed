@@ -1,5 +1,9 @@
 # Founders Pledge FED
 
+- [Repo](https://github.com/telegraphcreative/founderspledge-fed)
+
+- For a full introduction, reference this [Paper Document](https://paper.dropbox.com/doc/Founders-Readme--AYOsRSd1BBn4UVrFh5lrb_WgAQ-m3ZKqiXq01baNWetG9ari).
+
 ## Hugo + Tailwind + SASS + PurgeCSS
 
 Powered by Laravel Mix, this site is built using Hugo to efficiently generate static html pages and webpack to handle assets.

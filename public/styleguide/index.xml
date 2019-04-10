@@ -25,16 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/styleguide/readme/</guid>
-      <description>Layout Index Powered by Laravel Mix, this site is built using Hugo to efficiently generate static html pages and webpack to handle assets.
-Local Environment Setup
-Install packages yarn install
-Install Hugo brew install hugo
-Development Mode yarn do
-Starts a hugo server at http://localhost:1313/
-Generate Distrubtion Files yarn hugo
-File Structure Development files are stored in the Hugo theme, founders
-Assets
-   Type Path     JS Source .</description>
+      <description>For a full introduction, reference this Paper Document.</description>
     </item>
     
     <item>

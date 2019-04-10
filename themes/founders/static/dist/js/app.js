@@ -905,6 +905,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -937,9 +939,9 @@ __webpack_require__.r(__webpack_exports__);
     window.addEventListener('load', function () {
       // Handle Placeholder
       if (typeof _this.opt.prependPlaceholder !== 'undefined') {
-        var placeholderText = _this.opt.prependPlaceholder;
+        var placeholderVal = _this.opt.prependPlaceholder;
       } else {
-        var placeholderText = '';
+        var placeholderVal = '';
       } // Initialize Select
 
 
@@ -953,7 +955,7 @@ __webpack_require__.r(__webpack_exports__);
         callbackOnCreateTemplates: function callbackOnCreateTemplates(template) {
           return {
             item: function item(classNames, data) {
-              return template("\n                      <div class=\"".concat(classNames.item, " ").concat(data.highlighted ? classNames.highlightedState : classNames.itemSelectable, "\" data-item data-id=\"").concat(data.id, "\" data-value=\"").concat(data.value, "\" ").concat(data.active ? 'aria-selected="true"' : '', " ").concat(data.disabled ? 'aria-disabled="true"' : '', ">\n                          ").concat(placeholderText, " ").concat(data.label, "\n                      </div>\n                      "));
+              return template("\n                      <div \n                          class=\"".concat(classNames.item, " ").concat(data.highlighted ? classNames.highlightedState : classNames.itemSelectable, "\" \n                          data-item \n                          data-id=\"").concat(data.id, "\" \n                          data-value=\"").concat(data.value, "\" \n                          ").concat(data.active ? 'aria-selected="true"' : '', " \n                          ").concat(data.disabled ? 'aria-disabled="true"' : '', ">\n                          ").concat(placeholderVal, " \n                          ").concat(data.label, "\n                      </div>\n                      "));
             }
           };
         }
@@ -10342,7 +10344,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("select", { staticClass: "selectdrop" }, [_vm._t("default")], 2)
+  return _c(
+    "select",
+    {
+      staticClass: "selectdrop",
+      attrs: { id: _vm.opt.id, name: _vm.opt.name }
+    },
+    [_vm._t("default")],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -23342,9 +23352,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/lbradford/Sites/Client_Work/Founders_Pledge/founderspledge-fed/themes/founders/src/js/app.js */"./themes/founders/src/js/app.js");
-__webpack_require__(/*! /Users/lbradford/Sites/Client_Work/Founders_Pledge/founderspledge-fed/themes/founders/src/scss/app.scss */"./themes/founders/src/scss/app.scss");
-module.exports = __webpack_require__(/*! /Users/lbradford/Sites/Client_Work/Founders_Pledge/founderspledge-fed/themes/founders/src/scss/styleguide.scss */"./themes/founders/src/scss/styleguide.scss");
+__webpack_require__(/*! /Users/lindseybradford/Sites/Client_Work/FoundersPledge/themes/founders/src/js/app.js */"./themes/founders/src/js/app.js");
+__webpack_require__(/*! /Users/lindseybradford/Sites/Client_Work/FoundersPledge/themes/founders/src/scss/app.scss */"./themes/founders/src/scss/app.scss");
+module.exports = __webpack_require__(/*! /Users/lindseybradford/Sites/Client_Work/FoundersPledge/themes/founders/src/scss/styleguide.scss */"./themes/founders/src/scss/styleguide.scss");
 
 
 /***/ })

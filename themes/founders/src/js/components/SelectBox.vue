@@ -1,5 +1,7 @@
 <template>
   <select
+    :id="opt.id"
+    :name="opt.name"
     class="selectdrop">
     <slot />
   </select>
@@ -40,10 +42,11 @@
 
             // Handle Placeholder
             if (typeof (_this.opt.prependPlaceholder) !== 'undefined') {
-                var placeholderText = _this.opt.prependPlaceholder
+                var placeholderVal = _this.opt.prependPlaceholder
             } else {
-                var placeholderText = ''
+                var placeholderVal = ''
             }
+
 
             // Initialize Select
             const choices = new Choices(selectDrop, {
@@ -57,8 +60,15 @@
                     return {
                     item: (classNames, data) => {
                         return template(`
-                        <div class="${classNames.item} ${data.highlighted ? classNames.highlightedState : classNames.itemSelectable}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
-                            ${placeholderText} ${data.label}
+                        <div 
+                            class="${classNames.item} ${data.highlighted ? classNames.highlightedState : classNames.itemSelectable}" 
+                            data-item 
+                            data-id="${data.id}" 
+                            data-value="${data.value}" 
+                            ${data.active ? 'aria-selected="true"' : ''} 
+                            ${data.disabled ? 'aria-disabled="true"' : ''}>
+                            ${placeholderVal} 
+                            ${data.label }
                         </div>
                         `)
                     },
